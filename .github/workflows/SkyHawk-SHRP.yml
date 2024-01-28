@@ -1,5 +1,7 @@
 name: SkyHawk [SHRP]
 
+runs-on: self-hosted
+
 on:
   workflow_dispatch:
     inputs:
