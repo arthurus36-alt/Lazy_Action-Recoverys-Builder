@@ -1,4 +1,4 @@
-name: SkyHawk [SHRP]
+name: SkyHawk [SHRP] SELF-HOSTED
 
 on:
   workflow_dispatch:
