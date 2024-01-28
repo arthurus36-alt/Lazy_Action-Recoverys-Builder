@@ -1,7 +1,5 @@
 name: SkyHawk [SHRP]
 
-runs-on: self-hosted
-
 on:
   workflow_dispatch:
     inputs:
@@ -62,7 +60,7 @@ on:
 jobs:
   build:
     name: Build SHRP by ${{ github.actor }}
-    runs-on: ubuntu-20.04
+    runs-on: self-hosted
     if: github.event.repository.owner.id == github.event.sender.id
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
