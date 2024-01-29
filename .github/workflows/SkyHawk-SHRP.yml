@@ -104,10 +104,11 @@ jobs:
        git config --global pull.rebase true 
        export REPO=$
        sudo mktemp /tmp/repo.XXXXXXXXX
-       sudo curl -o ${REPO} https://storage.googleapis.com/git-repo-downloads/repo
-       sudo gpg --recv-keys 8BB9AD793E8E6153AF0F9A4416530D5E920F5C65
-       sudo curl -s https://storage.googleapis.com/git-repo-downloads/repo.asc | gpg --verify - ${REPO} && install -m 755 ${REPO} ~/bin/repo
-       sudo apt-get update -y
+       sudo mkdir ~/bin
+       sudo curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+       sudo chmod a+x ~/bin/repo
+       sudo ln -sf ~/bin/repo /usr/bin/repo
+        
           
     - name: Initialize Repo
       run: |
