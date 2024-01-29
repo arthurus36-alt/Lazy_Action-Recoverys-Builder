@@ -102,6 +102,8 @@ jobs:
        git config --global user.email "deathgamer.b.20102014@gmail.com"
        git config --global user.name "DeathgamerB"
        git config --global pull.rebase true 
+       sudo mkdir /home/deathgamer_b_20102014/bin
+       sudo chmod -R 777 /home/deathgamer_b_20102014/bin/repo
        export REPO=$
        sudo mktemp /tmp/repo.XXXXXXXXX
        sudo mkdir ~/bin
