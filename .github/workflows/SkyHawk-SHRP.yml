@@ -112,6 +112,7 @@ jobs:
        sudo chmod -R 777 /home/runner/bin/repo 
        sudo apt-get update
        sudo apt-get install repo
+       sudo chmod -R 777 /usr/bin/repo
           
     - name: Initialize Repo
       run: |
