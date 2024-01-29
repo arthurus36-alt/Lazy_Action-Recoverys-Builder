@@ -104,8 +104,6 @@ jobs:
        git config --global pull.rebase true 
        export REPO=$
        sudo mktemp /tmp/repo.XXXXXXXXX
-       sudo mkdir /home/deathgamer_b_20102014/bin
-       sudo chmod 777 -R /home/deathgamer_b_20102014/bin
        sudo curl -o ${REPO} https://storage.googleapis.com/git-repo-downloads/repo
        sudo gpg --recv-keys 8BB9AD793E8E6153AF0F9A4416530D5E920F5C65
        sudo curl -s https://storage.googleapis.com/git-repo-downloads/repo.asc | gpg --verify - ${REPO} && install -m 755 ${REPO} ~/bin/repo
