@@ -113,7 +113,8 @@ jobs:
        sudo apt-get update
        sudo apt-get install repo
        sudo chmod -R 777 /usr/bin/repo
-          
+      continue-on-error: true
+     
     - name: Initialize Repo
       run: |
         mkdir android-recovery
