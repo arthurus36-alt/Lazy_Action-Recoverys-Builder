@@ -139,6 +139,7 @@ jobs:
       run: |
         cd android-recovery
         git clone https://github.com/Spacewar-dev/android_kernel_nothing_sm7325.git ./kernel/nothing/sm7325 -b 14.0
+        git clone https://github.com/TheMuppets/proprietary_vendor_nothing_Spacewar.git ./vendor/nothing/Spacewar -b lineage-20
         git clone ${{ github.event.inputs.DEVICE_TREE }} -b ${{ github.event.inputs.DEVICE_TREE_BRANCH }} ./${{ github.event.inputs.DEVICE_PATH }}
         cd ${{ github.event.inputs.DEVICE_PATH }}
         echo "COMMIT_ID=$(git rev-parse HEAD)" >> $GITHUB_ENV
@@ -155,10 +156,6 @@ jobs:
         fi
       continue-on-error: true
 
-    - name: Download stuff
-      run: |
-        git clone https://github.com/DeathgamerB/vendor.prop.git ~/actions-runner/_work/Lazy_Action-Recoverys-Builder/Lazy_Action-Recoverys-Builder/android-recovery/out/target/product/Spacewar/vendor/
-        mv ~/actions-runner/_work/Lazy_Action-Recoverys-Builder/Lazy_Action-Recoverys-Builder/android-recovery/out/target/product/Spacewar/vendor/vendor.prop ~/actions-runner/_work/Lazy_Action-Recoverys-Builder/Lazy_Action-Recoverys-Builder/android-recovery/out/target/product/Spacewar/vendor//vendor.prop
     - name: Building Image 
       run: |
         cd android-recovery
