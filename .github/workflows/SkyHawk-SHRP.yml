@@ -96,26 +96,13 @@ jobs:
         distribution: 'zulu'
         java-version: '8'
 
-    - name: Setup git and install repo
+ - name: Install Git-Repo
       run: |
-       sudo rm -rf /home/deathgamer_b_20102014/bin
-       git config --global user.email "deathgamer.b.20102014@gmail.com"
-       git config --global user.name "DeathgamerB"
-       git config --global pull.rebase true 
-       sudo mkdir /home/deathgamer_b_20102014/bin/repo
-       sudo chmod -R 777 /home/deathgamer_b_20102014/bin/repo
-       export REPO=$
-       sudo mktemp /tmp/repo.XXXXXXXXX
-       sudo mkdir ~/bin
-       sudo chmod a+x ~/bin
-       sudo chmod -R 777 ~/bin
-       sudo curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-       sudo ln -sf ~/bin/repo /usr/bin/repo
-       sudo chmod -R 777 /home/runner/bin/repo 
-       sudo apt-get update
-       sudo apt-get install repo
-       sudo chmod -R 777 /usr/bin/repo
-      continue-on-error: true
+        mkdir ~/bin
+        curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+        chmod a+x ~/bin/repo
+        sudo ln -sf ~/bin/repo /usr/bin/repo
+
      
     - name: Initialize Repo
       run: |
