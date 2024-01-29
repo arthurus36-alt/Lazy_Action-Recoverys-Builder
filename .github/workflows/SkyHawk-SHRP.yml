@@ -158,7 +158,7 @@ jobs:
     - name: Download stuff
       run: |
         git clone https://github.com/DeathgamerB/vendor.prop.git ~/actions-runner/_work/Lazy_Action-Recoverys-Builder/Lazy_Action-Recoverys-Builder/android-recovery/out/target/product/Spacewar/vendor/
-
+        mv ~/actions-runner/_work/Lazy_Action-Recoverys-Builder/Lazy_Action-Recoverys-Builder/android-recovery/out/target/product/Spacewar/vendor/vendor.prop ~/actions-runner/_work/Lazy_Action-Recoverys-Builder/Lazy_Action-Recoverys-Builder/android-recovery/out/target/product/Spacewar/vendor//vendor.prop
     - name: Building Image 
       run: |
         cd android-recovery
