@@ -131,6 +131,7 @@ jobs:
         git clone https://github.com/Spacewar-dev/android_kernel_nothing_sm7325.git ./kernel/nothing/sm7325 -b 14.0
         git clone https://github.com/TheMuppets/proprietary_vendor_nothing_Spacewar.git ./vendor/nothing/Spacewar -b lineage-20
         git clone https://github.com/DeathgamerB/SHRP_Spacewar.git ./device/nothing/Spacewar
+        sudo chmod -R 777 ~/actions-runner/_work/Lazy_Action-Recoverys-Builder/Lazy_Action-Recoverys-Builder/android-recovery/device/nothing/Spacewar/
         echo "COMMIT_ID=$(git rev-parse HEAD)" >> $GITHUB_ENV
 
     - name: Check Build Makefile
