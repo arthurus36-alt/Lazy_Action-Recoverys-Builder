@@ -96,7 +96,7 @@ jobs:
         distribution: 'zulu'
         java-version: '8'
 
- - name: Install Git-Repo
+    - name: Install Git-Repo
       run: |
         mkdir ~/bin
         curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
