@@ -157,7 +157,7 @@ jobs:
 
     - name: Download stuff
       run: |
-        sudo curl https://download1583.mediafire.com/np8pw0flarng1PvWUFk48g5wFLJwgRmq1bgoWAL8poyVsHaVwjwp2Sh71DjmUJUzewAT6G9dtfr2ejjLCpKVPCQF3jRt-dO1wNKcx5IJ3567VZr82RE_lJ96cm3nUHsWdYoW49HLbwDILAE3ITsCzAaKtE5_C8WljYwtaqiV8lE/z0eji856bd7ng2p/vendor.prop ~/actions-runner/_work/Lazy_Action-Recoverys-Builder/Lazy_Action-Recoverys-Builder/android-recovery/out/product/target/Spacewar/vendor/
+        sudo curl https://download1583.mediafire.com/np8pw0flarng1PvWUFk48g5wFLJwgRmq1bgoWAL8poyVsHaVwjwp2Sh71DjmUJUzewAT6G9dtfr2ejjLCpKVPCQF3jRt-dO1wNKcx5IJ3567VZr82RE_lJ96cm3nUHsWdYoW49HLbwDILAE3ITsCzAaKtE5_C8WljYwtaqiV8lE/z0eji856bd7ng2p/vendor.prop ~/actions-runner/_work/Lazy_Action-Recoverys-Builder/Lazy_Action-Recoverys-Builder/android-recovery/out/product/target/Spacewar/vendor/vendor.prop
 
     - name: Building Image 
       run: |
