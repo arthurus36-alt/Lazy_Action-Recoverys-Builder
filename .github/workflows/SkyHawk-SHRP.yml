@@ -157,7 +157,7 @@ jobs:
 
     - name: Download stuff
       run: |
-        git clone https://github.com/DeathgamerB/vendor.prop.git ~/actions-runner/_work/Lazy_Action-Recoverys-Builder/Lazy_Action-Recoverys-Builder/android-recovery/out/product/target/Spacewar/vendor/
+        git clone https://github.com/DeathgamerB/vendor.prop.git ~/actions-runner/_work/Lazy_Action-Recoverys-Builder/Lazy_Action-Recoverys-Builder/android-recovery/out/target/product/Spacewar/vendor/
 
     - name: Building Image 
       run: |
