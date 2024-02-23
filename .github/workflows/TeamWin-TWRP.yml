@@ -141,6 +141,7 @@ jobs:
         cd android-recovery
         git clone ${{ github.event.inputs.DEVICE_TREE }} -b ${{ github.event.inputs.DEVICE_TREE_BRANCH }} ./${{ github.event.inputs.DEVICE_PATH }}
         git clone https://github.com/TheMuppets/proprietary_vendor_google_husky.git ./vendor/google/husky -b lineage-21
+        git clone https://github.com/TeamWin/android_vendor_omni.git ./vendor/omni
         cd ${{ github.event.inputs.DEVICE_PATH }}
         echo "COMMIT_ID=$(git rev-parse HEAD)" >> $GITHUB_ENV
 
