@@ -14,23 +14,23 @@ on:
       DEVICE_TREE:
         description: 'Custom Recovery Tree'
         required: true
-        default: 'https://github.com/lazycodebuilder/recovery_rmx1851'
+        default: 'https://github.com/DeathgamerB/ofrp_device_google_husky'
       DEVICE_TREE_BRANCH:
         description: 'Custom Recovery Tree Branch'
         required: true
-        default: 'android-14_ofrp'
+        default: 'main'
       DEVICE_PATH:
         description: 'Specify your device path.'
         required: true
-        default: 'device/realme/RMX1851'
+        default: 'device/google/husky'
       DEVICE_NAME:
         description: 'Specify your Device Codename.'
         required: true
-        default: 'RMX1851'
+        default: 'husky'
       BUILD_TARGET:
         description: 'Specify your Build Target'
         required: true
-        default: 'recovery'
+        default: 'vendorboot'
         type: choice
         options:
         - boot
@@ -89,6 +89,8 @@ jobs:
       run: |
         cd ${GITHUB_WORKSPACE}/OrangeFox/fox_${{ github.event.inputs.MANIFEST_BRANCH }}
         git clone ${{ github.event.inputs.DEVICE_TREE }} -b ${{ github.event.inputs.DEVICE_TREE_BRANCH }} ./${{ github.event.inputs.DEVICE_PATH }}
+        git clone https://github.com/TheMuppets/proprietary_vendor_google_husky.git ./vendor/google/husky -b lineage-21
+        git clone https://github.com/DeathgamerB/android_vendor_omni.git ./vendor/omni
         cd ${{ github.event.inputs.DEVICE_PATH }}
         echo "COMMIT_ID=$(git rev-parse HEAD)" >> $GITHUB_ENV
 
