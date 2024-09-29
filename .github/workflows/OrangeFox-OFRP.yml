@@ -89,8 +89,11 @@ jobs:
       run: |
         cd ${GITHUB_WORKSPACE}/OrangeFox/fox_${{ github.event.inputs.MANIFEST_BRANCH }}
         git clone ${{ github.event.inputs.DEVICE_TREE }} -b ${{ github.event.inputs.DEVICE_TREE_BRANCH }} ./${{ github.event.inputs.DEVICE_PATH }}
-        git clone https://github.com/TheMuppets/proprietary_vendor_google_husky.git ./vendor/google/husky -b lineage-21
-        git clone https://github.com/DeathgamerB/android_vendor_omni.git ./vendor/omni
+        git clone https://github.com/Trijal08/twrp_proprietary_vendor_google_husky.git ./vendor/google/husky
+        git clone https://github.com/Trijal08/twrp_device_google_gs-common.git ./device/google/gs-common
+        git clone https://github.com/Trijal08/twrp_hardware_google.git ./hardware/google
+        git clone https://github.com/Trijal08/twrp_device_google_zuma.git ./device/google/zuma
+        git clone https://android.googlesource.com/device/google/shusky-kernel ./device/google/shusky-kernel
         cd ${{ github.event.inputs.DEVICE_PATH }}
         echo "COMMIT_ID=$(git rev-parse HEAD)" >> $GITHUB_ENV
 
