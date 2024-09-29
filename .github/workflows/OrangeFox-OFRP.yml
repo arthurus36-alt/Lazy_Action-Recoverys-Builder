@@ -14,11 +14,11 @@ on:
       DEVICE_TREE:
         description: 'Custom Recovery Tree'
         required: true
-        default: 'https://github.com/DeathgamerB/ofrp_device_google_husky'
+        default: 'https://github.com/DeathgamerB/twrp_device_google_husky'
       DEVICE_TREE_BRANCH:
         description: 'Custom Recovery Tree Branch'
         required: true
-        default: 'main'
+        default: 'twrp-12.1'
       DEVICE_PATH:
         description: 'Specify your device path.'
         required: true
